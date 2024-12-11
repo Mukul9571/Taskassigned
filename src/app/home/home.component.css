@@ -1,0 +1,20 @@
+/* styles.css */
+.purple-text {
+    color: purple;
+    text-decoration: underline;
+}
+
+.default-text {
+    color: inherit;
+    /* This ensures the text is in its original color */
+}
+
+.header {
+    height: 40vh;
+    /* background-color: blue; */
+    background-image: url('../../assets/header-image.png');
+    /* background-position: inherit; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}

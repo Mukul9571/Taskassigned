@@ -1,0 +1,77 @@
+.header {
+    height: 40vh;
+    /* background-color: blue; */
+    background-image: url('../../assets/header-image.png');
+    /* background-position: inherit; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+#title {
+    /* height: 50vh; */
+    /* font-size: xx-large; */
+    /* background-color: blue; */
+    height: 30vh;
+}
+
+/* .footer {
+    height: 60vh;
+     background-color: aqua; 
+} */
+
+/* .header-image {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+} */
+
+/* #heading {
+    font-size: x-large;
+} */
+
+/* .video-container{
+
+} */
+/* .content {
+    max-width: 55vw;
+} */
+
+
+/* Container to ensure content is aligned properly */
+.container {
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Small Button */
+  .toggle-button {
+    position: absolute;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hidden Div */
+  .hidden-div {
+    position: fixed;
+    /* top: 100px; Slightly below the button */
+    right: 20px;
+    width: 200px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+  }
+  

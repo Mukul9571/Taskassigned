@@ -1,0 +1,59 @@
+<div class="container mt-5">
+  <div class="header">
+    <div class='d-flex justify-content-between p-4'>
+      <span id="heading">
+        IncubatedNEXT
+      </span>
+      <img class="header-image" src="./assets/header-image.png" alt="header-image">
+    </div>
+    <div class="d-flex align-items-end" id="title">
+
+      <div class='container-fluid d-flex justify-content-between p-4'>
+        <span style="font-size:60px">
+          AI-Powered Waste Management
+        </span>
+        <span style="font-size:20px; align-items: center;">14-Nov-2024</span>
+      </div>
+    </div>
+  </div>
+  <!-- Table Headers -->
+  <div class="row ">
+    <span class="col-12 col-md-2 title font-weight-bold" (click)="togglePurple('pending')"
+      [class.purple-text]="isPurple('pending')" [class.default-text]="!isPurple('pending')" style="font-size: 1.5em;">
+      Pending
+    </span>
+    <span class="col-12 col-md-2 punchline font-weight-bold" (click)="togglePurple('completed')"
+      [class.purple-text]="isPurple('completed')" [class.default-text]="!isPurple('completed')"
+      style="font-size: 1.5em;">
+      Completed
+    </span>
+  </div>
+  <span class="row border-bottom">
+    <span class="col-12 col-md-2 title font-weight-bold">Title</span>
+    <span class="col-12 col-md-4 punchline font-weight-bold">Punchline</span>
+    <span class="col-12 col-md-2 font-weight-bold">Submitted</span>
+    <span class="col-12 col-md-1 font-weight-bold">Category</span>
+    <span class="col-12 col-md-1 font-weight-bold">Potential</span>
+    <span class="col-12 col-md-1 font-weight-bold">Action</span>
+  </span>
+  <!-- Table Rows (Use *ngFor to loop over the data) -->
+  <!-- Table Rows (Use *ngFor to loop over the data) -->
+  <div class="row border-bottom" *ngFor="let item of data"
+    style="cursor: pointer; font-size: .75em; margin-bottom: 10px;">
+    <span class="col-12 col-md-2 title" *ngIf="!isMobileView">{{ item.Title }}</span>
+    <span class="col-12 col-md-2 title" *ngIf="isMobileView">
+      <h5>
+        {{ item.Title }}</h5>
+    </span>
+    <span class="col-12 col-md-4 punchline">{{ item.Punchline }}</span>
+    <span class="col-12 col-md-2">{{ item.Submitted }}</span>
+    <span class="col-12 col-md-1">{{ item.Category }}</span>
+    <span class="col-12 col-md-1">{{ item.Potential }}</span>
+
+    <span class="col-12 col-md-1">
+      <!-- Action can be text or icon in this case -->
+      <span style="color: blueviolet;" (click)="performAction(item)">{{item.action}}</span>
+    </span>
+  </div>
+  <span>Showing Ideas:{{getTotal()}}</span>
+</div>
